@@ -27,6 +27,25 @@ Console.Write("Введите число b = ");
 int b = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число c = ");
 int c = Convert.ToInt32(Console.ReadLine());
+
+if(a > b)
+{
+    if(a > c)
+    {
+        Console.Write("Максимальное число " + a);
+    }
+}
+else
+{
+    if(b > c)
+    {
+        Console.Write("Максимальное число " + b);
+    }
+    else
+    {
+        Console.Write("Максимальное число " + c);
+    }
+}
 */
 
 
