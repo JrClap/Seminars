@@ -55,6 +55,34 @@ int result = numbers (num);
 Console.WriteLine($"The third digit {result} from the number is {num}");
 */
 
+// Задача 13: Исправленная, через цикл.
+
+int numbers (int num)
+{
+    while (num > 1000)
+    {
+        if(num > 99 && num < 1000)
+        {
+            int a = num % 10;
+            return a;
+        }
+        else
+        {
+            num = 0;
+            return num; 
+        }        
+        int count = (num / 10) + 1;
+    }
+}
+
+Console.Write("Введите положительное число - ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+int result = numbers (num);
+
+Console.WriteLine($"The third digit {result} from the number is {num}");
+
+
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 /*
 bool day (int num)
@@ -73,6 +101,28 @@ Console.Write("Введите число обозначающее день не�
 int num = Convert.ToInt32(Console.ReadLine());
 
 bool result = day (num);
+
+Console.WriteLine($"Is the day of the week entered - {num} a weekday off? - {result}");
+*/
+
+// Задача 15: Через string, а не bool.
+/*
+string day (int num)
+{
+    if(num == 6 || num == 7)
+    {
+        return "DayOff";
+    }
+    else
+    {
+        return "WorkingDay";
+    }
+}
+
+Console.Write("Введите число обозначающее день недели - ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+string result = day (num);
 
 Console.WriteLine($"Is the day of the week entered - {num} a weekday off? - {result}");
 */
