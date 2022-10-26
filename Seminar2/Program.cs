@@ -19,32 +19,22 @@ Console.WriteLine($"New version of a numbers {num} number in the middle {result}
 /*
 int numbers (int num)
 {
-    if(99 < num & num <= 999)
+    int count = 0;
+    int res = 0;
+    while (count < 7)
     {
-        int a = num % 10;
-        return a;
-    }
-    else
-    {
-        if(num >= 1000 & num <= 9999)
+        if(num > 99 && num < 1000)
         {
-            int b = (num % 100) / 10;
-            return b;
+            res = num % 10;
+            break;
         }
         else
         {
-            if(num >= 10000 & num <= 99999)
-            {
-                int c = (num % 1000) / 100;
-                return c;
-            }
-            else
-            {
-                int d = 0;
-                return d;
-            }
+            num = num / 10;
         }
+        count++;
     }
+    return res;
 }
 
 Console.Write("Введите положительное число - ");
@@ -54,34 +44,6 @@ int result = numbers (num);
 
 Console.WriteLine($"The third digit {result} from the number is {num}");
 */
-
-// Задача 13: Исправленная, через цикл.
-
-int numbers (int num)
-{
-    while (num > 1000)
-    {
-        if(num > 99 && num < 1000)
-        {
-            int a = num % 10;
-            return a;
-        }
-        else
-        {
-            num = 0;
-            return num; 
-        }        
-        int count = (num / 10) + 1;
-    }
-}
-
-Console.Write("Введите положительное число - ");
-int num = Convert.ToInt32(Console.ReadLine());
-
-int result = numbers (num);
-
-Console.WriteLine($"The third digit {result} from the number is {num}");
-
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 /*
